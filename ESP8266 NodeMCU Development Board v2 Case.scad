@@ -39,7 +39,6 @@ logo_width = 23;
 logo_aspect_ratio = 0.56;
 logo_length = logo_width * logo_aspect_ratio;
 
-
 module box() {
     difference() {
         cube([board_width + 2 * shell_thickness, board_length + 2 * shell_thickness, bottom_clearance + board_height + 2 * shell_thickness + lid_inner_height]);
@@ -50,7 +49,6 @@ module box() {
         translate([shell_thickness, shell_thickness + board_length - lid_latch_corner_offset, shell_thickness + bottom_clearance + board_height + shell_thickness + lid_inner_height / 2]) sphere(r=lid_latch_radius);
         translate([shell_thickness + board_width, shell_thickness + board_length - lid_latch_corner_offset, shell_thickness + bottom_clearance + board_height + shell_thickness + lid_inner_height / 2]) sphere(r=lid_latch_radius);
     }
-
 }
 
 module support_corner() {
@@ -84,7 +82,6 @@ module bottom() {
     }
 }
 
-//TODO: Check z-axis
 module lid() {
     translate([shell_thickness, shell_thickness, 0]) difference() {
         union() {
@@ -106,6 +103,5 @@ translate([shell_thickness + board_width + 2 * shell_thickness + component_dista
     translate([shell_thickness + (board_width - logo_width) / 2, shell_thickness + (board_length - logo_length) / 2, 0 - lid_height - epsilon])
         linear_extrude(lid_height + lid_inner_height + 2 * epsilon)
             resize([logo_width, logo_length, 0])
-                // mirror([1, 0, 0])
                     import("logo.svg");
 }
