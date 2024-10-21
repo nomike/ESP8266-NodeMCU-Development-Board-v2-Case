@@ -9,8 +9,8 @@ directly transmit the data to a MQTT broker and for example to Home Assistant.
 
 #### Thingiverse
 
-<https://thingiverse.com/thing:>
+<https://www.thingiverse.com/thing:6804434>
 
 #### GitHub
 
-<>
+<https://github.com/nomike/ESP8266-NodeMCU-Development-Board-v2-Case>
